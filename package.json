@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Teangelo1/Workout_Tracker#readme",
   "dependencies": {
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "morgan": "^1.10.0"
   }
 }

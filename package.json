@@ -1,0 +1,22 @@
+{
+  "name": "workout_tracker",
+  "version": "1.0.0",
+  "description": "For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teangelo1/Workout_Tracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teangelo1/Workout_Tracker/issues"
+  },
+  "homepage": "https://github.com/Teangelo1/Workout_Tracker#readme",
+  "dependencies": {
+    "mongoose": "^5.12.3"
+  }
+}

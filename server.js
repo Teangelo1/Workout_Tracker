@@ -13,13 +13,15 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use(express.static("./public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
 
 // Our Routes 
-require("./Develop/routes/apiRoutes.js")(app);
-require("./Develop/routes/htmlRoutes.js")(app);
+
+app.use(require("./routes/htmlRoutes"));
+// require("./Develop/routes/apiRoutes.js")(app);
+// require("./Develop/routes/htmlRoutes.js")(app);
 
 // Starts our server
 

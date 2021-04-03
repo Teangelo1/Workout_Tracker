@@ -1,15 +1,19 @@
 const app = require("express").Router();
-const Workout = require("../public/workout");
+const Workout = require("../public/workouts.js");
 
 // Adding a new workout
-app.post("/api/workout", ({ body }, res) => {
+app.post("/api/workouts", ({ body }, res) => {
     console.log("new workout")
-    Workout.create(body)
-        .then(dbworkout => {
+    Workout.create(body).then(dbworkout => {
             res.json(dbworkout);
         }).catch(err => {
-            res.status(400).json(err);
+            res.json(err);
         })
+})
+
+app.get("/api/workouts", (req, res) => {
+    Workout.Find({}).then(dbworkout => {res.join(dbworkout);
+    }).catch(err => {res.json(err)})
 })
 
 
@@ -28,3 +32,5 @@ app.put("/api/workouts/:id", (req, res) => {
         res.json(err);
     });
 });
+
+module.exports = app;

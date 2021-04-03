@@ -1,5 +1,5 @@
 const app = require("express").Router();
-const Workout = require("../public/workouts.js");
+const Workout = require("../models/workouts");
 
 // Adding a new workout
 app.post("/api/workouts", ({ body }, res) => {
@@ -9,12 +9,12 @@ app.post("/api/workouts", ({ body }, res) => {
         }).catch(err => {
             res.json(err);
         })
-})
+});
 
 app.get("/api/workouts", (req, res) => {
     Workout.Find({}).then(dbworkout => {res.join(dbworkout);
     }).catch(err => {res.json(err)})
-})
+});
 
 
 app.put("/api/workouts/:id", (req, res) => {

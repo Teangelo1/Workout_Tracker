@@ -11,12 +11,19 @@ app.post("/api/workouts", ({ body }, res) => {
         })
 });
 
+// giving us our last workout
 app.get("/api/workouts", (req, res) => {
-    Workout.Find({}).then(dbworkout => {res.join(dbworkout);
+    Workout.find({}).then(dbworkout => {res.json(dbworkout);
+}).catch(err => {res.json(err)})
+});
+
+// giving us our daily results
+app.get("/api/workouts/range", (req, res) => {
+    Workout.find({}).then(dbworkout => {res.json(dbworkout)
     }).catch(err => {res.json(err)})
 });
 
-
+// 
 app.put("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(
         req.params.id,

@@ -17,13 +17,13 @@ app.get("/api/workouts", (req, res) => {
 }).catch(err => {res.json(err)})
 });
 
-// giving us our daily results
+// giving us our results
 app.get("/api/workouts/range", (req, res) => {
     Workout.find({}).then(dbworkout => {res.json(dbworkout)
     }).catch(err => {res.json(err)})
 });
 
-// 
+// Adds an exercise
 app.put("/api/workouts/:id", (req, res) => {
     Workout.findByIdAndUpdate(
         req.params.id,

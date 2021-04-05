@@ -42,7 +42,7 @@ The user should be able to:
 * Heroku
 &nbsp;
 
-  ## Deployed Heroku Link: [Workout Tracker]()
+  ## Deployed Heroku Link: [Workout Tracker](https://warm-journey-95857.herokuapp.com)
 &nbsp;
 
 

@@ -11,7 +11,7 @@ app.post("/api/workouts", ({ body }, res) => {
         })
 });
 
-// giving us our last workout
+// grabbing all data from db and add's total duration field to each workout
 
 app.get("/api/workouts", (req, res) => {
     Workout.aggregate([
